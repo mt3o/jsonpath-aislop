@@ -161,6 +161,7 @@ assert.strictEqual((testObj18b as any).polluted, undefined, 'Object prototype sh
 
 // Test with bracket notation
 // noinspection JSUnusedLocalSymbols
+//@ts-ignore
 const result18c = value(maliciousData, "$['__proto__']");
 const testObj18c = {};
 assert.strictEqual((testObj18c as any).polluted, undefined, 'Object prototype should not be polluted via bracket notation');

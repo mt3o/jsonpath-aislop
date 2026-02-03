@@ -7,7 +7,7 @@
   "author": "mt3o",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsonpath-rewritten/jsonpath-modern"
+    "url": "https://github.com/mt3o/jsonpath-aislop"
   },
   "type": "module",
   "main": "dist/index.js",

@@ -28,7 +28,26 @@ function query(obj, path) {
     return query(obj[parts[0]], parts.slice(1).join("."));
 }
 ```
+Or even:
+
+```
+function resolve(path, obj=self, separator='.') {
+    var properties = Array.isArray(path) ? path : path.split(separator)
+    return properties.reduce((prev, curr) => prev?.[curr], obj)
+}
+```
+Or even shorter:
+
+```js
+const resolve = (obj, path) => path.split('.').reduce((p,c)=>p?.[c], obj);
+```
+
 So you won't have to use the full library or anything!
+
+Read further at:
+
+- https://stackoverflow.com/questions/6491463/accessing-nested-javascript-objects-and-arrays-by-string-path
+- https://stackoverflow.com/questions/6393943/how-to-convert-a-string-in-dot-notation-into-an-object-reference
 
 ## Usage
 

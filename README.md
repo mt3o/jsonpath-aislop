@@ -15,6 +15,21 @@ AI slop rewrite of the [jsonpath](https://www.npmjs.com/package/jsonpath) librar
 npm install jsonpath-rewritten
 ```
 
+### Info
+
+If you want only to query object by path, try this:
+
+```
+function query(obj, path) {
+    parts = path.split(".");
+    if (parts.length==1){
+        return obj[parts[0]];
+    }
+    return query(obj[parts[0]], parts.slice(1).join("."));
+}
+```
+So you won't have to use the full library or anything!
+
 ## Usage
 
 ### Basic Query

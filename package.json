@@ -1,6 +1,6 @@
 {
   "name": "jsonpath-rewritten",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rewrite of the https://www.npmjs.com/package/jsonpath library fixing prototype pollution CVE",
   "keywords": ["jsonpath", "json", "path", "query", "typescript"],
   "license": "BSD-2-Clause",
